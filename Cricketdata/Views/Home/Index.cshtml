@@ -1,0 +1,165 @@
+﻿@{
+    ViewData["Title"] = "CRICKET";
+}
+@model CricketViewModel
+
+
+
+<div class="container">
+    <h2 class="text-center mt-5" style="font-family: 'Playwrite Cuba', sans-serif;">Cricket Details</h2>
+
+    <form asp-controller="Home" asp-action="Index" method="post" class="row g-3 mt-3">
+
+
+        <hr class="my-4">
+
+
+
+
+        <div class="col-md-6">
+            <div class="form-group">
+
+                <h2 class="mb-3">Player Details</h2>
+                <div class="mb-3">
+                    <label asp-for="FirstName" class="form-label">Player First Name</label>
+                    <input asp-for="FirstName" type="text" required class="form-control" placeholder="Enter first name">
+                    <span asp-validation-for="FirstName" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="LastName" class="form-label">Player Last Name</label>
+                    <input asp-for="LastName" type="text" required class="form-control" placeholder="Enter last name">
+                    <span asp-validation-for="LastName" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Matches" class="form-label">No.of Matches Played</label>
+                    <input asp-for="Matches" type="number" required class="form-control" placeholder="Enter in numbers">
+                    <span asp-validation-for="Matches" class="text-danger"></span>
+                </div>
+                <br />
+                <div class="mb-3">
+                    <label asp-for="Position" class="form-label">Player Role</label>
+
+                    <select asp-for="Position" class="form-select" required>
+                        <option value="">Select a role</option>
+                        <option value="Batter">Batter</option>
+                        <option value="Bowler">Bowler</option>
+                        <option value="WK">Wicket Keeper</option>
+
+                    </select>
+                    <span asp-validation-for="LastName" class="text-danger"></span>
+
+                </div>
+
+
+
+            </div>
+        </div>
+
+
+        <hr class="my-4">
+
+
+        <div class="col-md-6">
+            <div class="form-group">
+
+                <h2 class="mb-3">Batting Details</h2>
+                <div class="mb-3">
+                    <label asp-for="Runs" class="form-label">Runs Scored</label>
+                    <input asp-for="Runs" type="number" required class="form-control" placeholder="Enter in numbers">
+                    <span asp-validation-for="Runs" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="BattingAverage" class="form-label">Batting Average</label>
+                    <input asp-for="BattingAverage" type="number" required class="form-control" placeholder="Enter in numbers">
+                    <span asp-validation-for="BattingAverage" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="StrikeRate" class="form-label">Batting Strike Rate</label>
+                    <input asp-for="StrikeRate" type="number" required class="form-control" placeholder="Enter in numbers">
+                    <span asp-validation-for="StrikeRate" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="HighScore" class="form-label">High Score</label>
+                    <input asp-for="HighScore" type="number" required class="form-control" placeholder="Enter in numbers">
+                    <span asp-validation-for="HighScore" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+
+                    <label asp-for="HighScoreAverage" class="form-label">No. of 100s</label>
+                    <input asp-for="HighScoreAverage" type="number" required class="form-control" placeholder="Enter in numbers">
+                    <span asp-validation-for="HighScoreAverage" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <div class="mb-3">
+
+
+                    <h2 class="mb-3">Bowling Details</h2>
+                    <label asp-for="Wickets" class="form-label">Wickets taken</label>
+                    <input asp-for="Wickets" type="number" required class="form-control" placeholder="Enter in numbers">
+                    <span asp-validation-for="Wickets" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="BowlingAverage" class="form-label">Bowling Average</label>
+                    <input asp-for="BowlingAverage" type="number" required class="form-control" placeholder="Enter in numbers">
+                    <span asp-validation-for="BowlingAverage" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="StrikeRateBowling" class="form-label">Bowling Strike Rate</label>
+                    <input asp-for="StrikeRateBowling" type="number" required class="form-control" placeholder="Enter in numbers">
+                    <span asp-validation-for="StrikeRateBowling" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="BBM" class="form-label">Best Bowling in Match</label>
+                    <input asp-for="BBM" type="text" required class="form-control">
+                    <span asp-validation-for="BBM" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="W" class="form-label">No. of 5W haul</label>
+                    <input asp-for="W" type="number" required class="form-control" placeholder="Enter in numbers">
+                    <span asp-validation-for="W" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <hr class="my-4">
+                <h2 class="mb-3">Fielding Details</h2>
+
+                <div class="mb-3">
+                    <label asp-for="Catches" class="form-label">Catches taken</label>
+                    <input asp-for="Catches" type="number" required class="form-control" placeholder="Enter in numbers">
+                    <span asp-validation-for="Catches" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Runout" class="form-label">Runout</label>
+                    <input asp-for="Runout" type="number" required class="form-control" placeholder="Enter in numbers">
+                    <span asp-validation-for="Runout" class="text-danger"></span>
+                </div>
+
+                <hr class="my-4">
+
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+
+                    <button type="reset" class="btn btn-primary">Clear</button>
+                </div>
+            </div>
+        </div>
+
+    </form>
+</div>
